@@ -1,0 +1,116 @@
+{
+  "app": {
+    "title": "Bảng Điều Khiển Validator Cosmos",
+    "description": "Truy cập thông tin staking, theo dõi validator Cosmos dễ dàng."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "validators": "Validators",
+    "delegators": "Delegators",
+    "analytics": "Phân tích",
+    "governance": "Quản trị",
+    "connect_wallet": "Kết nối ví",
+    "validator_list": "Danh sách Validators",
+    "performance_analysis": "Phân tích hiệu suất",
+    "validator_comparison": "So sánh Validators"
+  },
+  "hero": {
+    "title": "Cosmos Staking Dashboard",
+    "subtitle": "Theo dõi validator, phân tích hiệu suất staking, và quản lý delegations của bạn trong hệ sinh thái Cosmos.",
+    "search_placeholder": "Tìm kiếm địa chỉ, validator, hoặc giao dịch...",
+    "search_button": "Tìm kiếm",
+    "search_types": {
+      "address": "Địa chỉ",
+      "validator": "Validator",
+      "tx": "Giao dịch"
+    },
+    "stats": {
+      "validators": "Validators",
+      "apr": "APR",
+      "staked": "Đã Stake"
+    }
+  },
+  "network": {
+    "title": "Tổng Quan Mạng Lưới",
+    "total_staked": "Tổng Staked",
+    "active_validators": "Validators Hoạt Động",
+    "block_time": "Thời Gian Block",
+    "network_apr": "APR Mạng Lưới",
+    "period": "24h"
+  },
+  "validator_stats": {
+    "title": "Validators Hàng Đầu",
+    "search_placeholder": "Tìm kiếm validators...",
+    "columns": {
+      "validator": "Validator",
+      "voting_power": "Voting Power",
+      "commission": "Hoa Hồng",
+      "uptime": "Uptime",
+      "delegators": "Delegators",
+      "status": "Trạng Thái"
+    }
+  },
+  "features": {
+    "title": "Tính năng nổi bật",
+    "subtitle": "Công cụ toàn diện cho cả validator và delegator trong hệ sinh thái Cosmos",
+    "items": {
+      "validator_analytics": {
+        "title": "Validator Analytics",
+        "description": "Phân tích chi tiết hiệu suất validator, uptime, và commission rates"
+      },
+      "delegator_dashboard": {
+        "title": "Delegator Dashboard",
+        "description": "Theo dõi rewards, unbonding periods, và tổng số tiền đã stake"
+      },
+      "validator_alerts": {
+        "title": "Validator Alerts",
+        "description": "Nhận thông báo khi validator bị jailed hoặc có dấu hiệu hoạt động kém"
+      },
+      "staking_security": {
+        "title": "Staking Security",
+        "description": "Đánh giá rủi ro và phân tích decentralization của network"
+      },
+      "apr_comparison": {
+        "title": "APR Comparison",
+        "description": "So sánh lợi nhuận staking giữa các validator khác nhau"
+      },
+      "auto_compound": {
+        "title": "Auto-compound",
+        "description": "Tự động reinvest rewards để tối đa hóa lợi nhuận staking"
+      },
+      "unbonding_tracker": {
+        "title": "Unbonding Tracker",
+        "description": "Theo dõi thời gian unbonding và lịch trình giải phóng tokens"
+      },
+      "governance_voting": {
+        "title": "Governance Voting",
+        "description": "Tham gia và theo dõi các đề xuất quản trị trong hệ sinh thái Cosmos"
+      }
+    }
+  },
+  "footer": {
+    "description": "Công cụ theo dõi validator và delegator cho hệ sinh thái Cosmos, giúp bạn tối ưu hóa lợi nhuận staking.",
+    "links": "Liên kết",
+    "resources": "Tài nguyên",
+    "connect": "Kết nối",
+    "link_items": {
+      "home": "Trang chủ",
+      "validators": "Validators",
+      "delegators": "Delegators",
+      "analytics": "Phân tích"
+    },
+    "resource_items": {
+      "guides": "Hướng dẫn",
+      "api_docs": "Tài liệu API",
+      "blog": "Blog",
+      "faq": "FAQ"
+    },
+    "copyright": "© 2025 Cosmos Dashboard. Made by a Cosmos validator.",
+    "terms": "Điều khoản sử dụng",
+    "privacy": "Chính sách bảo mật"
+  },
+  "language": {
+    "en": "Tiếng Anh",
+    "vi": "Tiếng Việt"
+  }
+} 
