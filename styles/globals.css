@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+:root {
+  /* Modern Color Palette - Blue/Teal theme */
+  --color-primary: #3b82f6;      /* Blue-500 - vibrant primary */
+  --color-primary-light: #60a5fa; /* Blue-400 */
+  --color-primary-dark: #2563eb;  /* Blue-600 */
+  
+  --color-accent: #14b8a6;       /* Teal-500 - vibrant accent */
+  --color-accent-light: #2dd4bf; /* Teal-400 */
+  --color-accent-dark: #0d9488;  /* Teal-600 */
+  
+  /* Modern gradients */
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+  --gradient-accent: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%);
+  
+  /* Status colors */
+  --color-success: #10b981;      /* Emerald-500 */
+  --color-warning: #f59e0b;      /* Amber-500 */
+  --color-danger: #ef4444;       /* Red-500 */
+  --color-info: #3b82f6;         /* Blue-500 */
+  
+  /* Neutral colors for backgrounds */
+  --color-bg-primary: #0f172a;   /* Slate-900 - dark mode background */
+  --color-bg-secondary: #1e293b; /* Slate-800 */
+  --color-bg-tertiary: #334155;  /* Slate-700 */
+  
+  /* Text colors */
+  --color-text-primary: #f8fafc;   /* Slate-50 */
+  --color-text-secondary: #e2e8f0; /* Slate-200 */
+  --color-text-tertiary: #94a3b8;  /* Slate-400 */
+}
+
+/* Utility classes for the new colors */
+@layer utilities {
+  .bg-gradient-cosmic {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-cosmos {
+    background: var(--gradient-accent);
+  }
+  
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .text-gradient-accent {
+    background-image: var(--gradient-accent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .card-shadow {
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+  }
+  
+  .glow-primary {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.5);
+  }
+} 
