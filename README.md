@@ -1,88 +1,109 @@
 # Cosmos Validator Dashboard
 
-A comprehensive dashboard for monitoring Cosmos validators and staking rewards. Built with Next.js and Tailwind CSS, with multi-language support for English and Vietnamese.
+## Project Overview
 
-## Features
+A comprehensive web application for tracking and analyzing Cosmos blockchain validators, staking performance, and network metrics.
 
-- **Validator Analytics**: Detailed analysis of validator performance, uptime, and commission rates
-- **Delegator Dashboard**: Track rewards, unbonding periods, and total amount staked
-- **Validator Alerts**: Receive notifications when validators are jailed or show signs of poor performance
-- **Multi-language Support**: Currently supports English and Vietnamese
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
+## Technologies Used
 
-## Tech Stack
-
-- **Frontend**: Next.js, React, TypeScript
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Internationalization**: next-intl
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/blockchain-watcher.git
-cd blockchain-watcher
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-# or
-yarn install
-```
-
-3. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js 13
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide React Icons
 
 ## Project Structure
 
 ```
-├── components/         # React components
-├── messages/           # Internationalization files
-│   ├── en/             # English translations
-│   └── vi/             # Vietnamese translations
-├── pages/              # Next.js pages
-├── public/             # Static assets
-└── styles/             # Global styles
+blockchain-watcher/
+│
+├── public/                 # Static assets
+│   ├── favicon.ico
+│   └── images/
+│
+├── src/
+│   ├── components/         # Reusable UI components
+│   │   ├── Navbar.tsx      # Main navigation component
+│   │   ├── Footer.tsx      # Site footer component
+│   │   └── layout/
+│   │       └── MainLayout.tsx  # Primary layout wrapper
+│   │
+│   ├── pages/              # Next.js pages
+│   │   ├── index.tsx       # Home page
+│   │   ├── validators/     # Validators-related pages
+│   │   │   └── index.tsx
+│   │   └── analytics/      # Analytics pages
+│   │       └── index.tsx
+│   │
+│   ├── styles/             # Styling
+│   │   └── globals.css     # Global CSS
+│   │
+│   └── types/              # TypeScript type definitions
+│       └── validator.ts    # Validator-related types
+│
+├── tailwind.config.js      # Tailwind CSS configuration
+├── next.config.js          # Next.js configuration
+├── package.json            # Project dependencies and scripts
+└── tsconfig.json           # TypeScript configuration
 ```
 
-## Adding New Languages
+## Features
 
-1. Create a new folder in the `messages` directory with the language code
-2. Copy the structure from an existing language file (e.g., `messages/en/common.json`)
-3. Translate the strings to the new language
-4. Update the `LanguageProvider.tsx` file to include the new language
+- Responsive design
+- Validator tracking
+- Network statistics
+- Staking performance analysis
+
+## Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+
+## Getting Started
+
+1. Clone the repository
+```bash
+git clone https://github.com/phoenixit99/cosmos-validator-dashboard.git
+```
+
+2. Install dependencies
+```bash
+cd blockchain-watcher
+npm install
+```
+
+3. Run the development server
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Available Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Create production build
+- `npm start`: Start production server
+- `npm run lint`: Run linter
 
 ## Deployment
 
-This project can be deployed on any platform that supports Next.js, such as Vercel, Netlify, or a custom server.
+The application is configured for easy deployment on Vercel or similar platforms supporting Next.js.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-## Acknowledgements
+## Contact
 
-- Built for the Cosmos ecosystem
-- Inspired by existing validator dashboards and monitoring tools 
+Your Name - [Your Email]
+
+Project Link: [https://github.com/your-username/cosmos-validator-dashboard](https://github.com/your-username/cosmos-validator-dashboard) 
