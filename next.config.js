@@ -1,19 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@/components': `${__dirname}/src/components`,
-      '@/features': `${__dirname}/src/features`,
-      '@/services': `${__dirname}/src/services`,
-      '@/types': `${__dirname}/src/types`,
-      '@/styles': `${__dirname}/src/styles`,
-      '@/hooks': `${__dirname}/src/hooks`,
-    };
-    return config;
+  output: 'export', // Enables static export
+  images: {
+    unoptimized: true, // Required for static export
   },
-}
+  basePath: process.env.NODE_ENV === 'production' ? '/cosmos-validator-dashboard' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/cosmos-validator-dashboard/' : '',
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig; 
