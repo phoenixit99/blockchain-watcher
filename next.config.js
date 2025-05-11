@@ -4,8 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/cosmos-validator-dashboard' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/cosmos-validator-dashboard/' : '',
+  // Remove basePath and assetPrefix for now
+  trailingSlash: true, // Helps with GitHub Pages routing
+  // Optional: Add any additional configuration needed
 };
 
 module.exports = nextConfig; 
