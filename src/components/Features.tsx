@@ -61,9 +61,9 @@ const Features: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Key Features</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Comprehensive tools for both validators and delegators in the Cosmos ecosystem
-          </p>
+        </p>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div 
