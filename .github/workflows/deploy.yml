@@ -23,9 +23,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: blockchain-watcher
     steps:
       - name: Debug Information
         run: |
@@ -52,7 +49,7 @@ jobs:
         uses: actions/configure-pages@v4
       
       - name: Restore NPM Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -79,14 +76,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nextjs-site
-          path: blockchain-watcher/out
+          path: out/
           retention-days: 1
           if-no-files-found: error
-        
-      - name: Verify Artifact
-        run: |
-          echo "Artifact upload completed"
-          ls -la ${{ steps.upload.outputs.artifact-path }}
 
   # Deployment job
   deploy:
@@ -103,7 +95,8 @@ jobs:
       - name: Deployment Verification
         run: |
           echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
-          
+          curl -f ${{ steps.deployment.outputs.page_url }}
+
   # Optional: Post-deployment checks
   post-deploy:
     needs: deploy
