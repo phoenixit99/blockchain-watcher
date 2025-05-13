@@ -79,7 +79,7 @@ const ValidatorStats: React.FC = () => {
           <h2 className="text-3xl font-bold">Top Validators</h2>
           
           <div className="relative">
-            <input 
+            <input
               type="text"
               placeholder="Search validators..."
               value={searchQuery}
@@ -92,7 +92,7 @@ const ValidatorStats: React.FC = () => {
             />
           </div>
         </div>
-
+        
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-gray-800">
@@ -103,7 +103,7 @@ const ValidatorStats: React.FC = () => {
                     className="px-4 py-3 text-left text-sm font-medium uppercase tracking-wider"
                   >
                     {column.label}
-                  </th>
+                </th>
                 ))}
               </tr>
             </thead>

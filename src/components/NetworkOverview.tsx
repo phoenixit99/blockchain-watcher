@@ -3,7 +3,7 @@ import { Globe, Clock, TrendingUp, Server } from 'lucide-react';
 
 const NetworkOverview: React.FC = () => {
   const networkStats = [
-    {
+    { 
       icon: Globe,
       title: 'Total Staked',
       value: '$1.2B',
@@ -37,8 +37,8 @@ const NetworkOverview: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Real-time insights into the Cosmos network performance
           </p>
-        </div>
-
+      </div>
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {networkStats.map((stat, index) => (
             <div 

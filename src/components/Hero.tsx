@@ -42,7 +42,7 @@ export default function Hero() {
               <option value="tx">Transaction</option>
             </select>
             <button 
-              type="submit" 
+              type="submit"
               className="px-6 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 transition"
             >
               Search
