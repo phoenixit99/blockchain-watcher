@@ -23,6 +23,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: blockchain-watcher
     steps:
       - name: Debug Information
         run: |
@@ -43,7 +46,7 @@ jobs:
         with:
           node-version: "18"
           cache: 'npm'
-          cache-dependency-path: './blockchain-watcher/package-lock.json'
+          cache-dependency-path: 'package-lock.json'
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -52,31 +55,33 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            blockchain-watcher/node_modules
-            blockchain-watcher/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('blockchain-watcher/package-lock.json') }}
+            node_modules
+            .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-
       
       - name: Install Dependencies
-        working-directory: ./blockchain-watcher
         run: |
           npm ci
           echo "Installed dependencies successfully"
-      
+
+      - name: Run Linter
+        run: npm run lint
+
       - name: Build Next.js Application
-        working-directory: ./blockchain-watcher
         run: |
           npm run build
           echo "Build completed successfully"
-          ls -la out/  # List contents of the output directory
+          ls -la out/
       
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: nextjs-site
-          path: ./blockchain-watcher/out
+          path: blockchain-watcher/out
           retention-days: 1
+          if-no-files-found: error
         
       - name: Verify Artifact
         run: |
