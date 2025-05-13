@@ -1,12 +1,9 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Enables static export
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export
-  },
-  // Remove basePath and assetPrefix for now
-  trailingSlash: true, // Helps with GitHub Pages routing
-  // Optional: Add any additional configuration needed
-};
+    unoptimized: true  // Important for static export
+  }
+}
 
-module.exports = nextConfig; 
+module.exports = nextConfig
